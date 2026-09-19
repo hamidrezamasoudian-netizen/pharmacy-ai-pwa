@@ -1,0 +1,101 @@
+﻿<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>سامانه هوشمند داروسازی</title>
+
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#0d9488">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-title" content="داروسازی هوشمند">
+  <link rel="apple-touch-icon" href="icon-192.png">
+
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: Tahoma, "Segoe UI", sans-serif;
+      background: linear-gradient(135deg, #0f172a, #1e293b);
+      color: #fff;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+      text-align: center;
+    }
+    .card {
+      width: 100%;
+      max-width: 420px;
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.12);
+      border-radius: 20px;
+      padding: 32px 24px;
+      backdrop-filter: blur(10px);
+    }
+    .icon {
+      width: 72px;
+      height: 72px;
+      margin: 0 auto 16px;
+      border-radius: 18px;
+      background: linear-gradient(135deg, #14b8a6, #0ea5e9);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 34px;
+    }
+    h1 {
+      font-size: 1.4rem;
+      margin: 0 0 8px;
+    }
+    p {
+      color: #cbd5e1;
+      font-size: 0.95rem;
+      line-height: 1.7;
+      margin: 0 0 22px;
+    }
+    .btn {
+      display: inline-block;
+      background: linear-gradient(135deg, #14b8a6, #0d9488);
+      color: #fff;
+      text-decoration: none;
+      padding: 14px 22px;
+      border-radius: 12px;
+      font-weight: 700;
+      font-size: 1rem;
+    }
+    .hint {
+      margin-top: 18px;
+      font-size: 0.8rem;
+      color: #94a3b8;
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <div class="icon">💊</div>
+    <h1>سامانه هوشمند داروسازی</h1>
+    <p>
+      نسخه‌خوانی، تحلیل هوشمند و صدور فاکتور داروخانه
+      <br>
+      برای ورود به سامانه روی دکمه زیر بزنید
+    </p>
+
+    <a class="btn" href="https://hamidrezamasoudian-netizen.github.io/pharmacy-ai-platform/">
+      ورود به سامانه
+    </a>
+
+    <div class="hint">می‌توانید این صفحه را به‌صورت اپ نصب کنید</div>
+  </div>
+
+  <script>
+    if ("serviceWorker" in navigator) {
+      window.addEventListener("load", () => {
+        navigator.serviceWorker.register("./service-worker.js").catch(console.log);
+      });
+    }
+  </script>
+</body>
+</html>
